@@ -3,7 +3,7 @@
 // Q1
 console.log(y);
 let y = 10;
-// Cannot access y before initialization (let not Hoisted)
+// ReferenceError:Cannot access y before initialization (let not Hoisted)
 
 // // Q2
 var a = 2;
@@ -76,7 +76,7 @@ run(5);
     function f() { return 1; }
 }
 console.log(typeof f);
-// function (function declaration is hoisted)
+// function (function declaration is hoisted), but in strict mod will get undefined
 
 // // Q10
 const inc = (function () {
@@ -390,3 +390,44 @@ console.log(count);
 // undefined||0 =>0 then 0+1 =1
 // then if the char exist in acc => acc[cur] will return the count of char and then increase it
 // so reduce will return object contain char. in arr and it's number of occurence
+
+
+// Types
+
+// Q51
+console.log(Number("10px"))
+console.log(parseInt("10px"))
+// Nan 10 (10px "px" not a number return Nan parseInt parse string to number until it get non numeric char)
+
+// Q52
+console.log(isNaN("foo"), Number.isNaN("foo"));
+// true false (isNaN("foo") converts to NaN first, while Number.isNaN("foo") it checks the exact value without conversion.)
+
+// Q53
+const a = 2, b = "3";
+console.log(`${a + b}`);
+// 23 (number string =>string)
+
+
+
+
+// Loops
+
+// Q54
+const a = [10];
+a.foo = 99;
+for (const k in a) console.log("in:", k); //  Iterates over enumerable properties including array indices and custom properties
+for (const v of a) console.log("of:", v); //  Iterates over array values ignores custom properties
+// in: 0 in: foo of: 10 
+
+
+// Conditions
+
+// Q55
+const obj = { a: { b: 0 } };
+const x = obj.a?.b ?? 7;
+// x =0 (obj.a?.b => first check if obj.a exist then access b if b exist will get the value if not will store 7 )
+
+// Q56
+console.log("A" && "" || "C")
+// C ("A" && "" =>  retun "" then ""||"C" will return C)
