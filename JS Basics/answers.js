@@ -1,5 +1,4 @@
 // variables
-
 // Q1
 console.log(y);
 let y = 10;
