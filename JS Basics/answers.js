@@ -17,7 +17,6 @@ let b = 100;
 }
 console.log(b);
 //50 100 (b=50 block scop so log 50 outside block can not see it so log 100)
-
 // // Q4
 const obj = { name: "NodeJS" };
 obj.name = "JavaScript";
