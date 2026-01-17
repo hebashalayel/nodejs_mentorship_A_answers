@@ -3,7 +3,6 @@
 console.log(y);
 let y = 10;
 // ReferenceError:Cannot access y before initialization (let not Hoisted)
-
 // // Q2
 var a = 2;
 var a = 5;
@@ -29,7 +28,6 @@ console.log(obj.name);
 x = 42;
 console.log(global.x === x);
 //true (when initialize x without declar using va,let,const will be globall variable)
-
 // // Q6
 function test() {
     var z = 1;
