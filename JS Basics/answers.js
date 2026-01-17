@@ -12,7 +12,6 @@ console.log(a);
 let b = 100;
 {
     let b = 50;
-    
     console.log(b);
 }
 console.log(b);
