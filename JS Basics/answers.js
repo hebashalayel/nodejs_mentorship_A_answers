@@ -8,7 +8,6 @@ var a = 2;
 var a = 5;
 console.log(a);
 // 5 (var can be redeclared)
-
 // // Q3
 let b = 100;
 {
