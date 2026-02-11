@@ -32,6 +32,7 @@ function test() {
         z++;
         return z;
     }
+    
 }
 const fn = test();
 console.log(fn(), fn(), fn());
